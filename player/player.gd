@@ -29,8 +29,10 @@ func get_input() -> void:
 	
 	if Input.is_action_pressed("left") == true:
 		velocity.x = -RUN_SPEED
+		sprite_2d.flip_h = true
 	elif Input.is_action_pressed("right") == true:
 		velocity.x = RUN_SPEED
+		sprite_2d.flip_h = false
 		
 	if Input.is_action_just_pressed("jump") == true and is_on_floor() == true: 
 		velocity.y = JUMP_VELOCITY

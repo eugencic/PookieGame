@@ -89,7 +89,7 @@ size = Vector2(20, 16)
 script = ExtResource("2_tea3a")
 metadata/_edit_vertical_guides_ = [38.0]
 
-[node name="AnimatedSprite2D" parent="." index="0"]
+[node name="AnimatedSprite2D" parent="." index="1"]
 position = Vector2(0, 2)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_avka6")

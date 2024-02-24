@@ -10,7 +10,7 @@ const GRAVITY: float = 500.0
 const RUN_SPEED: float = 120.0
 const MAX_FALL: float = 400.0
 const HURT_TIME: float = 0.3
-const JUMP_VELOCITY: float = -400.0
+const JUMP_VELOCITY: float = -200.0
 
 enum PLAYER_STATE { IDLE, RUN, JUMP, FALL, HURT }
 
@@ -33,7 +33,6 @@ func update_debug_label() -> void:
 	]
 
 func get_input() -> void:
-	
 	velocity.x = 0
 	
 	if Input.is_action_pressed("left") == true:
@@ -42,10 +41,10 @@ func get_input() -> void:
 	elif Input.is_action_pressed("right") == true:
 		velocity.x = RUN_SPEED
 		sprite_2d.flip_h = false
-		
-	if Input.is_action_just_pressed("jump") == true and is_on_floor() == true: 
+	
+	if Input.is_action_just_pressed("jump") == true and is_on_floor() == true:
 		velocity.y = JUMP_VELOCITY
-		SoundManager.play_clip(sound_player, SoundManager.SOUND_JUMP)
+		SoundManager.play_clip(sound_player, SoundManager.SOUND_JUMP) 
 		
 	velocity.y = clampf(velocity.y, JUMP_VELOCITY, MAX_FALL)
 	
@@ -84,4 +83,3 @@ func set_state(new_state: PLAYER_STATE) -> void:
 			animation_player.play("jump")
 		PLAYER_STATE.FALL:
 			animation_player.play("fall")
-			

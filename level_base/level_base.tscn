@@ -1021,6 +1021,9 @@ sources/3 = SubResource("TileSetAtlasSource_aarte")
 position = Vector2(378, -60)
 script = ExtResource("1_yebry")
 
+[node name="Frog" parent="." instance=ExtResource("8_r631y")]
+position = Vector2(157, 143)
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(141, 171)
 tile_set = SubResource("TileSet_c2cl8")
@@ -1032,10 +1035,7 @@ position = Vector2(149, 43)
 zoom = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("3_manxk")]
-position = Vector2(90, 63)
+position = Vector2(105, 136)
 
 [node name="Snail" parent="." instance=ExtResource("6_ecb36")]
-position = Vector2(687, 130)
-
-[node name="Frog" parent="." instance=ExtResource("8_r631y")]
-position = Vector2(43, 40)
+position = Vector2(34, 151)

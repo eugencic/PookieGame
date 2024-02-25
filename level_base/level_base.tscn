@@ -1037,4 +1037,10 @@ position = Vector2(90, 63)
 position = Vector2(430, 128)
 
 [node name="Frog" parent="." instance=ExtResource("8_r631y")]
-position = Vector2(157, 159)
+position = Vector2(518, 152)
+
+[node name="Frog2" parent="." instance=ExtResource("8_r631y")]
+position = Vector2(205, 115)
+
+[node name="Frog3" parent="." instance=ExtResource("8_r631y")]
+position = Vector2(52, 155)

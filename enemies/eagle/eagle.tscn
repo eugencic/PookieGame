@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://b8uohr4s8k63c"]
+
+[ext_resource type="PackedScene" uid="uid://swbapeehbuj5" path="res://enemies/enemy_base/enemy_base.tscn" id="1_xy70f"]
+[ext_resource type="Script" path="res://enemies/eagle/eagle.gd" id="2_db58k"]
+[ext_resource type="Texture2D" uid="uid://dkw0l7uttoti7" path="res://assets/enemies/eagle/eagle.png" id="2_ri3pg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6h7bn"]
+atlas = ExtResource("2_ri3pg")
+region = Rect2(0, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onohy"]
+atlas = ExtResource("2_ri3pg")
+region = Rect2(40, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u10o"]
+atlas = ExtResource("2_ri3pg")
+region = Rect2(80, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_un4ht"]
+atlas = ExtResource("2_ri3pg")
+region = Rect2(120, 0, 40, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a0gsx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6h7bn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onohy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8u10o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_un4ht")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_koc66"]
+radius = 7.07107
+
+[node name="Eagle" instance=ExtResource("1_xy70f")]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("2_db58k")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_a0gsx")
+animation = &"fly"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(-1, 2)
+shape = SubResource("CircleShape2D_koc66")
+
+[node name="PlayerDetector" type="RayCast2D" parent="." index="3"]
+target_position = Vector2(0, 200)
+
+[node name="DirectionTimer" type="Timer" parent="." index="4"]
+wait_time = 3.0
+
+[connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]

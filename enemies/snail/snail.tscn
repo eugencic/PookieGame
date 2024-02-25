@@ -86,6 +86,7 @@ animations = [{
 size = Vector2(20, 16)
 
 [node name="Snail" instance=ExtResource("1_w2ooo")]
+collision_layer = 0
 script = ExtResource("2_tea3a")
 metadata/_edit_vertical_guides_ = [38.0]
 

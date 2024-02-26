@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dmiw0jyqr3ov7"]
+[gd_scene load_steps=15 format=3 uid="uid://dmiw0jyqr3ov7"]
 
 [ext_resource type="Texture2D" uid="uid://b2hq56v8llqgf" path="res://assets/tiles/Terrain (16x16).png" id="1_rsl5b"]
 [ext_resource type="Script" path="res://level_base/level_base.gd" id="1_yebry"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://gy6xg3r6jt08" path="res://assets/tiles/ChurchTileset.png" id="4_kkgir"]
 [ext_resource type="PackedScene" uid="uid://bfrut6uvfw7rj" path="res://enemies/snail/snail.tscn" id="6_ecb36"]
 [ext_resource type="PackedScene" uid="uid://bf123tyld22sd" path="res://enemies/frog/frog.tscn" id="8_r631y"]
+[ext_resource type="PackedScene" uid="uid://d2bkfik3jjycn" path="res://bullets/bullet_player/bullet_player.tscn" id="9_yr4lq"]
+[ext_resource type="PackedScene" uid="uid://c7pmcsjjntv1v" path="res://bullets/bullet_enemy/bullet_enemy.tscn" id="10_tdgke"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2vlm"]
 texture = ExtResource("1_rsl5b")
@@ -1039,3 +1041,9 @@ position = Vector2(105, 136)
 
 [node name="Snail" parent="." instance=ExtResource("6_ecb36")]
 position = Vector2(34, 151)
+
+[node name="BulletPlayer" parent="." instance=ExtResource("9_yr4lq")]
+position = Vector2(127, 142)
+
+[node name="BulletEnemy" parent="." instance=ExtResource("10_tdgke")]
+position = Vector2(75, 142)

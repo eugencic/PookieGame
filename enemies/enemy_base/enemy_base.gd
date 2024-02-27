@@ -36,6 +36,7 @@ func die():
 	SignalManager.on_enemy_hit.emit(points, global_position)
 	set_physics_process(false)
 	hide()
+	queue_free()
 
 func _on_visible_on_screen_notifier_2d_screen_entered():
 	pass # Replace with function body.

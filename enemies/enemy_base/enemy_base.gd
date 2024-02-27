@@ -34,6 +34,7 @@ func die():
 		
 	_dying = true
 	SignalManager.on_enemy_hit.emit(points, global_position)
+	ObjectMaker.create_explosion(global_position)
 	set_physics_process(false)
 	hide()
 	queue_free()
@@ -46,3 +47,4 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 func _on_hit_box_area_entered(area):
 	print("Enemy hit:", area)
+	die()

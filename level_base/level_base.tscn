@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dmiw0jyqr3ov7"]
+[gd_scene load_steps=14 format=3 uid="uid://dmiw0jyqr3ov7"]
 
 [ext_resource type="Texture2D" uid="uid://b2hq56v8llqgf" path="res://assets/tiles/Terrain (16x16).png" id="1_rsl5b"]
 [ext_resource type="Script" path="res://level_base/level_base.gd" id="1_yebry"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dco3uo67q3ej6" path="res://assets/tiles/Terrain-2.png" id="2_v6yxk"]
 [ext_resource type="PackedScene" uid="uid://bogrhuk7xox7l" path="res://player/player.tscn" id="3_manxk"]
 [ext_resource type="Texture2D" uid="uid://gy6xg3r6jt08" path="res://assets/tiles/ChurchTileset.png" id="4_kkgir"]
+[ext_resource type="PackedScene" uid="uid://bfrut6uvfw7rj" path="res://enemies/snail/snail.tscn" id="6_ecb36"]
 [ext_resource type="PackedScene" uid="uid://b8uohr4s8k63c" path="res://enemies/eagle/eagle.tscn" id="8_c35sb"]
 [ext_resource type="PackedScene" uid="uid://bf123tyld22sd" path="res://enemies/frog/frog.tscn" id="8_r631y"]
 
@@ -1039,3 +1040,6 @@ position = Vector2(84, 137)
 
 [node name="Eagle" parent="." instance=ExtResource("8_c35sb")]
 position = Vector2(431, -2)
+
+[node name="Snail" parent="." instance=ExtResource("6_ecb36")]
+position = Vector2(445, 47)

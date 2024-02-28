@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dmiw0jyqr3ov7"]
+[gd_scene load_steps=19 format=3 uid="uid://dmiw0jyqr3ov7"]
 
 [ext_resource type="Texture2D" uid="uid://b2hq56v8llqgf" path="res://assets/tiles/Terrain (16x16).png" id="1_rsl5b"]
 [ext_resource type="Script" path="res://level_base/level_base.gd" id="1_yebry"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cd56cm2sq27nr" path="res://boss/boss.tscn" id="10_1nbjh"]
 [ext_resource type="PackedScene" uid="uid://c41efxlckxijt" path="res://checkpoint/checkpoint.tscn" id="11_d8m1i"]
 [ext_resource type="PackedScene" uid="uid://toqkxw8kp5xh" path="res://moving_platform/moving_platform.tscn" id="12_7x87m"]
+[ext_resource type="PackedScene" uid="uid://h8btxyymuvfs" path="res://ball_spikes/ball_spikes.tscn" id="13_46qbi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2vlm"]
 texture = ExtResource("1_rsl5b")
@@ -1037,6 +1038,12 @@ sources/0 = SubResource("TileSetAtlasSource_s2vlm")
 sources/1 = SubResource("TileSetAtlasSource_g4vbj")
 sources/3 = SubResource("TileSetAtlasSource_aarte")
 
+[sub_resource type="Curve2D" id="Curve2D_3df4t"]
+_data = {
+"points": PackedVector2Array(20.2615, -36.3178, -20.2615, 36.3178, 1228, -29, 0, 0, 0, 0, 1230, 69, 23.3198, 26.3782, -23.3198, -26.3782, 1325, -26, 0, 0, 0, 0, 1228, -29)
+}
+point_count = 4
+
 [node name="LevelBase" type="Node2D"]
 position = Vector2(378, -60)
 script = ExtResource("1_yebry")
@@ -1055,7 +1062,7 @@ position = Vector2(149, 43)
 zoom = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("3_manxk")]
-position = Vector2(94, 133)
+position = Vector2(762, 121)
 
 [node name="Eagle" parent="." instance=ExtResource("8_c35sb")]
 position = Vector2(431, -2)
@@ -1081,3 +1088,12 @@ position = Vector2(452, 88)
 
 [node name="MP1_2" type="Marker2D" parent="Marker"]
 position = Vector2(373, 89)
+
+[node name="Paths" type="Node" parent="."]
+
+[node name="Spikes1" type="Path2D" parent="Paths"]
+curve = SubResource("Curve2D_3df4t")
+
+[node name="BallSpikes" parent="Paths/Spikes1" instance=ExtResource("13_46qbi")]
+position = Vector2(1228, -29)
+rotation = 2.07968

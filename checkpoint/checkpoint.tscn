@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://c41efxlckxijt"]
+[gd_scene load_steps=16 format=3 uid="uid://c41efxlckxijt"]
 
+[ext_resource type="Script" path="res://checkpoint/checkpoint.gd" id="1_uv24p"]
 [ext_resource type="Texture2D" uid="uid://6onlyj1xr0a7" path="res://assets/items/checkpoint.png" id="1_yomuy"]
 
 [sub_resource type="Animation" id="Animation_48rg0"]
@@ -157,6 +158,8 @@ size = Vector2(13, 44.5)
 [node name="Checkpoint" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
+monitoring = false
+script = ExtResource("1_uv24p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(10, -32)
@@ -178,8 +181,12 @@ libraries = {
 }
 tree_root = SubResource("AnimationNodeStateMachine_htswa")
 anim_player = NodePath("../AnimationPlayer")
-parameters/conditions/on_trigger = true
+parameters/conditions/on_trigger = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(27.5, -23)
 shape = SubResource("RectangleShape2D_fl685")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dmiw0jyqr3ov7"]
+[gd_scene load_steps=17 format=3 uid="uid://dmiw0jyqr3ov7"]
 
 [ext_resource type="Texture2D" uid="uid://b2hq56v8llqgf" path="res://assets/tiles/Terrain (16x16).png" id="1_rsl5b"]
 [ext_resource type="Script" path="res://level_base/level_base.gd" id="1_yebry"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bf123tyld22sd" path="res://enemies/frog/frog.tscn" id="8_r631y"]
 [ext_resource type="PackedScene" uid="uid://cd56cm2sq27nr" path="res://boss/boss.tscn" id="10_1nbjh"]
 [ext_resource type="PackedScene" uid="uid://c41efxlckxijt" path="res://checkpoint/checkpoint.tscn" id="11_d8m1i"]
+[ext_resource type="PackedScene" uid="uid://toqkxw8kp5xh" path="res://moving_platform/moving_platform.tscn" id="12_7x87m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2vlm"]
 texture = ExtResource("1_rsl5b")
@@ -1054,7 +1055,7 @@ position = Vector2(149, 43)
 zoom = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("3_manxk")]
-position = Vector2(84, 137)
+position = Vector2(94, 133)
 
 [node name="Eagle" parent="." instance=ExtResource("8_c35sb")]
 position = Vector2(431, -2)
@@ -1067,3 +1068,16 @@ position = Vector2(555, 164)
 
 [node name="Checkpoint" parent="." instance=ExtResource("11_d8m1i")]
 position = Vector2(572, 164)
+
+[node name="MovingPlatform" parent="." node_paths=PackedStringArray("p1", "p2") instance=ExtResource("12_7x87m")]
+position = Vector2(38, 148)
+p1 = NodePath("../Marker/MP1_2")
+p2 = NodePath("../Marker/MP1_1")
+
+[node name="Marker" type="Node" parent="."]
+
+[node name="MP1_1" type="Marker2D" parent="Marker"]
+position = Vector2(452, 88)
+
+[node name="MP1_2" type="Marker2D" parent="Marker"]
+position = Vector2(373, 89)

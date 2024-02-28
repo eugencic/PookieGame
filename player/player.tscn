@@ -120,6 +120,21 @@ _data = {
 radius = 5.0
 height = 18.0
 
+[sub_resource type="Animation" id="Animation_fkj7j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_gsmu0"]
 resource_name = "invincible"
 length = 0.4
@@ -137,21 +152,6 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_fkj7j"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mim33"]
 _data = {
 "RESET": SubResource("Animation_fkj7j"),
@@ -159,7 +159,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
-collision_layer = 0
+collision_layer = 32
 script = ExtResource("1_q2shb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

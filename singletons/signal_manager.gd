@@ -5,3 +5,4 @@ signal on_pickup_hit(points: int)
 signal on_boss_killed(points: int)
 signal on_level_complete
 signal on_game_over
+signal on_player_hit(points: int)

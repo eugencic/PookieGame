@@ -14,6 +14,9 @@ func _process(delta):
 	if vb_level_complete.visible == true:
 		if Input.is_action_just_pressed("jump") == true:
 			GameManager.load_next_level_scene()
+	if vb_game_over.visible == true:
+		if Input.is_action_just_pressed("jump") == true:
+			GameManager.load_main_scene()
 			
 func show_hud() -> void:
 	Engine.time_scale = 0

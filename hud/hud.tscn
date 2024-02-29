@@ -1,0 +1,139 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbrqa56our4ud"]
+
+[ext_resource type="FontFile" uid="uid://bm7f53iju8b5" path="res://assets/fonts/gemunu-libre-v8-latin-700.ttf" id="1_aeau3"]
+[ext_resource type="Texture2D" uid="uid://deehqtash0du5" path="res://assets/items/pixel heart 2.png" id="2_gd0pj"]
+[ext_resource type="LabelSettings" uid="uid://ce761wvavxufs" path="res://assets/LG_64_Title.tres" id="3_qt1qd"]
+[ext_resource type="LabelSettings" path="res://assets/LG_24_SubTitle.tres" id="4_3itrh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ktr3y"]
+font = ExtResource("1_aeau3")
+font_size = 48
+outline_size = 2
+outline_color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+shadow_color = Color(0.298039, 0.686275, 0.705882, 0.670588)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MC" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 77.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HB" type="HBoxContainer" parent="MC"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ScoreLabel" type="Label" parent="MC/HB"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.43
+text = "0000"
+label_settings = SubResource("LabelSettings_ktr3y")
+
+[node name="HB" type="HBoxContainer" parent="MC/HB"]
+layout_mode = 2
+
+[node name="L1" type="TextureRect" parent="MC/HB/HB"]
+layout_mode = 2
+texture = ExtResource("2_gd0pj")
+stretch_mode = 5
+
+[node name="L2" type="TextureRect" parent="MC/HB/HB"]
+layout_mode = 2
+texture = ExtResource("2_gd0pj")
+stretch_mode = 5
+
+[node name="L3" type="TextureRect" parent="MC/HB/HB"]
+layout_mode = 2
+texture = ExtResource("2_gd0pj")
+stretch_mode = 5
+
+[node name="L4" type="TextureRect" parent="MC/HB/HB"]
+layout_mode = 2
+texture = ExtResource("2_gd0pj")
+stretch_mode = 5
+
+[node name="L5" type="TextureRect" parent="MC/HB/HB"]
+layout_mode = 2
+texture = ExtResource("2_gd0pj")
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.00392157, 0.0980392, 0.780392)
+
+[node name="LevelComplete" type="VBoxContainer" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorRect/LevelComplete"]
+layout_mode = 2
+text = "LEVEL COMPLETE"
+label_settings = ExtResource("3_qt1qd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect/LevelComplete"]
+layout_mode = 2
+text = "PRESS JUMP FOR NEXT LEVEL"
+label_settings = ExtResource("4_3itrh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOver" type="VBoxContainer" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorRect/GameOver"]
+layout_mode = 2
+text = "GAME OVER"
+label_settings = ExtResource("3_qt1qd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect/GameOver"]
+layout_mode = 2
+text = "PRESS JUMP FOR MAIN MENU"
+label_settings = ExtResource("4_3itrh")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dmiw0jyqr3ov7"]
+[gd_scene load_steps=28 format=3 uid="uid://dmiw0jyqr3ov7"]
 
 [ext_resource type="Texture2D" uid="uid://b2hq56v8llqgf" path="res://assets/tiles/Terrain (16x16).png" id="1_rsl5b"]
 [ext_resource type="Script" path="res://level_base/level_base.gd" id="1_yebry"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dgbymi1qf204o" path="res://assets/backgrounds/game_background_3/layers/clouds_2.png" id="20_ih0r3"]
 [ext_resource type="Texture2D" uid="uid://ccqf51bf7k1w6" path="res://assets/backgrounds/game_background_3/layers/clouds_1.png" id="21_55gtp"]
 [ext_resource type="AudioStream" uid="uid://byj24sv4mxrti" path="res://assets/sound/dragonfather.ogg" id="21_b20ht"]
+[ext_resource type="PackedScene" uid="uid://cbrqa56our4ud" path="res://hud/hud.tscn" id="22_vhw1x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2vlm"]
 texture = ExtResource("1_rsl5b")
@@ -1195,3 +1196,7 @@ position = Vector2(563, 169)
 stream = ExtResource("21_b20ht")
 volume_db = -15.0
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("22_vhw1x")]

@@ -15,4 +15,4 @@ func on_boss_killed(_p: int) -> void:
 	SoundManager.play_clip(sound, SoundManager.SOUND_WIN)
 	
 func _on_area_entered(area):
-	print("LEVEL COMPLETE")
+	SignalManager.on_level_complete.emit()

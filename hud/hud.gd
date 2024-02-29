@@ -24,6 +24,8 @@ func _process(delta):
 		if Input.is_action_just_pressed("jump") == true:
 			GameManager.load_main_scene()
 			
+	on_score_updated()
+			
 func show_hud() -> void:
 	Engine.time_scale = 0
 	color_rect.visible = true

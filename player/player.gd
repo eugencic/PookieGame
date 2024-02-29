@@ -12,6 +12,7 @@ class_name Player
 @onready var hurt_timer = $HurtTimer
 
 const GRAVITY: float = 500.0
+const FALLEN_OFF: float = 200.0
 const RUN_SPEED: float = 120.0
 const MAX_FALL: float = 400.0
 const JUMP_VELOCITY: float = -200.0
@@ -30,6 +31,7 @@ func _physics_process(delta):
 	if is_on_floor() == false:
 		velocity.y += GRAVITY * delta
 		
+	fallen_off()
 	get_input()
 	move_and_slide()
 	calculate_states()
@@ -44,6 +46,13 @@ func update_debug_label() -> void:
 		PLAYER_STATE.keys()[_state],_lives,
 		velocity.x, velocity.y
 	]
+	
+func fallen_off() -> void:
+	if global_position.y < FALLEN_OFF:
+		return
+		
+	_lives = 1
+	reduce_lives()
 
 func shoot() -> void:
 	if sprite_2d.flip_h == true:

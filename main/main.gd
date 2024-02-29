@@ -1,9 +1,10 @@
 extends CanvasLayer
 
+@onready var label_high_score = $VBoxContainer/LabelHighScore
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Engine.time_scale = 1
+	label_high_score.text = "Highscore: " + str(ScoreManager.get_high_score())
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

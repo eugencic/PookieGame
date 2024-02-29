@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://hud/hud.gd" id="1_fd54v"]
 [ext_resource type="Texture2D" uid="uid://deehqtash0du5" path="res://assets/items/pixel heart 2.png" id="2_gd0pj"]
 [ext_resource type="LabelSettings" uid="uid://ce761wvavxufs" path="res://assets/LG_64_Title.tres" id="3_qt1qd"]
-[ext_resource type="LabelSettings" uid="uid://cuwf3bj2aw6qq" path="res://assets/LG_24_SubTitle.tres" id="4_3itrh"]
+[ext_resource type="LabelSettings" path="res://assets/LG_24_SubTitle.tres" id="4_3itrh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ktr3y"]
 font = ExtResource("1_aeau3")

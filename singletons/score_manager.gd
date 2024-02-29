@@ -6,8 +6,6 @@ const HS_KEY: String = "highscore"
 var _score: int = 0
 var _high_score: int = 0
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	load_high_score()

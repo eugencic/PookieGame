@@ -15,7 +15,7 @@ const GRAVITY: float = 500.0
 const FALLEN_OFF: float = 200.0
 const RUN_SPEED: float = 120.0
 const MAX_FALL: float = 400.0
-const JUMP_VELOCITY: float = -200.0
+const JUMP_VELOCITY: float = -230.0
 const HURT_JUMP_VELOCITY: Vector2 = Vector2(0, -150.0)
 
 enum PLAYER_STATE { IDLE, RUN, JUMP, FALL, HURT }

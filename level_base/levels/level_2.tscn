@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://hi1k1j60tuve"]
+[gd_scene load_steps=5 format=3 uid="uid://hi1k1j60tuve"]
 
 [ext_resource type="PackedScene" uid="uid://dmiw0jyqr3ov7" path="res://level_base/level_base.tscn" id="1_vh8yw"]
 [ext_resource type="PackedScene" uid="uid://cd56cm2sq27nr" path="res://boss/boss.tscn" id="2_0t4c1"]
 [ext_resource type="PackedScene" uid="uid://c41efxlckxijt" path="res://checkpoint/checkpoint.tscn" id="3_j4v36"]
+[ext_resource type="PackedScene" uid="uid://bf123tyld22sd" path="res://enemies/frog/frog.tscn" id="4_ade5e"]
 
 [node name="Level_2" instance=ExtResource("1_vh8yw")]
 
@@ -11,3 +12,6 @@ position = Vector2(2350, 21)
 
 [node name="Checkpoint" parent="." index="7" instance=ExtResource("3_j4v36")]
 position = Vector2(2398, 26)
+
+[node name="Frog" parent="." index="8" instance=ExtResource("4_ade5e")]
+position = Vector2(308, 130)

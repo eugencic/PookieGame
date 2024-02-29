@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://hfkeoxvefj66"]
+[gd_scene load_steps=6 format=3 uid="uid://hfkeoxvefj66"]
 
 [ext_resource type="PackedScene" uid="uid://dmiw0jyqr3ov7" path="res://level_base/level_base.tscn" id="1_afky0"]
 [ext_resource type="PackedScene" uid="uid://c41efxlckxijt" path="res://checkpoint/checkpoint.tscn" id="2_u65gv"]
 [ext_resource type="PackedScene" uid="uid://cd56cm2sq27nr" path="res://boss/boss.tscn" id="3_pf3j6"]
 [ext_resource type="PackedScene" uid="uid://bfrut6uvfw7rj" path="res://enemies/snail/snail.tscn" id="4_m8ne5"]
 [ext_resource type="PackedScene" uid="uid://toqkxw8kp5xh" path="res://moving_platform/moving_platform.tscn" id="5_ewjd6"]
-[ext_resource type="PackedScene" uid="uid://c6gdqnay0geyf" path="res://floor_spikes/floor_spikes.tscn" id="6_wxlgs"]
 
 [node name="Level_1" instance=ExtResource("1_afky0")]
 
@@ -34,36 +33,33 @@ position = Vector2(-3796, -26)
 [node name="2" type="Marker2D" parent="Node1" index="1"]
 position = Vector2(-3797, 97)
 
-[node name="FloorSpikes" parent="." index="11" instance=ExtResource("6_wxlgs")]
-position = Vector2(709, 161)
-
-[node name="Snail2" parent="." index="12" instance=ExtResource("4_m8ne5")]
+[node name="Snail2" parent="." index="11" instance=ExtResource("4_m8ne5")]
 position = Vector2(546, -132)
 
-[node name="Snail3" parent="." index="13" instance=ExtResource("4_m8ne5")]
+[node name="Snail3" parent="." index="12" instance=ExtResource("4_m8ne5")]
 position = Vector2(224, -212)
 
-[node name="Snail4" parent="." index="14" instance=ExtResource("4_m8ne5")]
+[node name="Snail4" parent="." index="13" instance=ExtResource("4_m8ne5")]
 position = Vector2(338, -358)
 
-[node name="Snail5" parent="." index="15" instance=ExtResource("4_m8ne5")]
+[node name="Snail5" parent="." index="14" instance=ExtResource("4_m8ne5")]
 position = Vector2(787, -358)
 
-[node name="Snail6" parent="." index="16" instance=ExtResource("4_m8ne5")]
+[node name="Snail6" parent="." index="15" instance=ExtResource("4_m8ne5")]
 position = Vector2(914, -313)
 
-[node name="Snail7" parent="." index="17" instance=ExtResource("4_m8ne5")]
+[node name="Snail7" parent="." index="16" instance=ExtResource("4_m8ne5")]
 position = Vector2(835, -108)
 
-[node name="Snail8" parent="." index="18" instance=ExtResource("4_m8ne5")]
+[node name="Snail8" parent="." index="17" instance=ExtResource("4_m8ne5")]
 position = Vector2(844, 7)
 
-[node name="MovingPlatform2" parent="." index="19" node_paths=PackedStringArray("p1", "p2") instance=ExtResource("5_ewjd6")]
+[node name="MovingPlatform2" parent="." index="18" node_paths=PackedStringArray("p1", "p2") instance=ExtResource("5_ewjd6")]
 position = Vector2(31, -339)
 p1 = NodePath("../Node2/1")
 p2 = NodePath("../Node2/2")
 
-[node name="Node2" type="Node" parent="." index="20"]
+[node name="Node2" type="Node" parent="." index="19"]
 
 [node name="1" type="Marker2D" parent="Node2" index="0"]
 position = Vector2(-4292, -424)
@@ -71,12 +67,12 @@ position = Vector2(-4292, -424)
 [node name="2" type="Marker2D" parent="Node2" index="1"]
 position = Vector2(-4298, -372)
 
-[node name="MovingPlatform3" parent="." index="21" node_paths=PackedStringArray("p1", "p2") instance=ExtResource("5_ewjd6")]
+[node name="MovingPlatform3" parent="." index="20" node_paths=PackedStringArray("p1", "p2") instance=ExtResource("5_ewjd6")]
 position = Vector2(513, -257)
 p1 = NodePath("../Node2/1")
 p2 = NodePath("../Node2/2")
 
-[node name="Node3" type="Node" parent="." index="22"]
+[node name="Node3" type="Node" parent="." index="21"]
 
 [node name="1" type="Marker2D" parent="Node3" index="0"]
 position = Vector2(-3817, -372)
@@ -84,18 +80,18 @@ position = Vector2(-3817, -372)
 [node name="2" type="Marker2D" parent="Node3" index="1"]
 position = Vector2(-3813, -269)
 
-[node name="Snail9" parent="." index="23" instance=ExtResource("4_m8ne5")]
+[node name="Snail9" parent="." index="22" instance=ExtResource("4_m8ne5")]
 position = Vector2(844, 7)
 
-[node name="Snail10" parent="." index="24" instance=ExtResource("4_m8ne5")]
+[node name="Snail10" parent="." index="23" instance=ExtResource("4_m8ne5")]
 position = Vector2(1469, -7)
 
-[node name="MovingPlatform4" parent="." index="25" node_paths=PackedStringArray("p1", "p2") instance=ExtResource("5_ewjd6")]
+[node name="MovingPlatform4" parent="." index="24" node_paths=PackedStringArray("p1", "p2") instance=ExtResource("5_ewjd6")]
 position = Vector2(1599, -144)
 p1 = NodePath("../Node4/1")
 p2 = NodePath("../Node4/2")
 
-[node name="Node4" type="Node" parent="." index="26"]
+[node name="Node4" type="Node" parent="." index="25"]
 
 [node name="1" type="Marker2D" parent="Node4" index="0"]
 position = Vector2(-2725, -260)
@@ -103,11 +99,11 @@ position = Vector2(-2725, -260)
 [node name="2" type="Marker2D" parent="Node4" index="1"]
 position = Vector2(-2727, -132)
 
-[node name="Snail11" parent="." index="27" instance=ExtResource("4_m8ne5")]
+[node name="Snail11" parent="." index="26" instance=ExtResource("4_m8ne5")]
 position = Vector2(1587, -96)
 
-[node name="Snail12" parent="." index="28" instance=ExtResource("4_m8ne5")]
+[node name="Snail12" parent="." index="27" instance=ExtResource("4_m8ne5")]
 position = Vector2(1681, -310)
 
-[node name="Snail13" parent="." index="29" instance=ExtResource("4_m8ne5")]
+[node name="Snail13" parent="." index="28" instance=ExtResource("4_m8ne5")]
 position = Vector2(1971, 7)

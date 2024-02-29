@@ -44,30 +44,30 @@ size_flags_stretch_ratio = 6.43
 text = "0000"
 label_settings = SubResource("LabelSettings_ktr3y")
 
-[node name="HB" type="HBoxContainer" parent="MC/HB"]
+[node name="HB_Hearts" type="HBoxContainer" parent="MC/HB"]
 layout_mode = 2
 
-[node name="L1" type="TextureRect" parent="MC/HB/HB"]
-layout_mode = 2
-texture = ExtResource("2_gd0pj")
-stretch_mode = 5
-
-[node name="L2" type="TextureRect" parent="MC/HB/HB"]
+[node name="L1" type="TextureRect" parent="MC/HB/HB_Hearts"]
 layout_mode = 2
 texture = ExtResource("2_gd0pj")
 stretch_mode = 5
 
-[node name="L3" type="TextureRect" parent="MC/HB/HB"]
+[node name="L2" type="TextureRect" parent="MC/HB/HB_Hearts"]
 layout_mode = 2
 texture = ExtResource("2_gd0pj")
 stretch_mode = 5
 
-[node name="L4" type="TextureRect" parent="MC/HB/HB"]
+[node name="L3" type="TextureRect" parent="MC/HB/HB_Hearts"]
 layout_mode = 2
 texture = ExtResource("2_gd0pj")
 stretch_mode = 5
 
-[node name="L5" type="TextureRect" parent="MC/HB/HB"]
+[node name="L4" type="TextureRect" parent="MC/HB/HB_Hearts"]
+layout_mode = 2
+texture = ExtResource("2_gd0pj")
+stretch_mode = 5
+
+[node name="L5" type="TextureRect" parent="MC/HB/HB_Hearts"]
 layout_mode = 2
 texture = ExtResource("2_gd0pj")
 stretch_mode = 5

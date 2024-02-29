@@ -38,7 +38,6 @@ func kill_me() -> void:
 func _on_life_timer_timeout():
 	kill_me()
 
-
 func _on_area_entered(area):
 	SignalManager.on_pickup_hit.emit(POINTS)
 	kill_me()

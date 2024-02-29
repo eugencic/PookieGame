@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://yul2nv08hb5w"]
+[gd_scene load_steps=7 format=3 uid="uid://yul2nv08hb5w"]
 
+[ext_resource type="Script" path="res://main/main.gd" id="1_ayqq5"]
 [ext_resource type="Texture2D" uid="uid://coraqsb7qeqbr" path="res://assets/backgrounds/game_background_3/game_background_3.1.png" id="1_ysyyu"]
 [ext_resource type="FontFile" uid="uid://d26q4223l20s3" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="2_uu1gw"]
 [ext_resource type="AudioStream" uid="uid://djtc6agkkp0j6" path="res://assets/sound/after_dark.ogg" id="3_ytx8k"]
@@ -19,6 +20,7 @@ outline_size = 5
 outline_color = Color(0.537255, 0.0431373, 0.2, 1)
 
 [node name="Main" type="CanvasLayer"]
+script = ExtResource("1_ayqq5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15

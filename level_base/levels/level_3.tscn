@@ -1,5 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bf5kygb862riv"]
+[gd_scene load_steps=3 format=3 uid="uid://bf5kygb862riv"]
 
 [ext_resource type="PackedScene" uid="uid://dmiw0jyqr3ov7" path="res://level_base/level_base.tscn" id="1_gqc2q"]
+[ext_resource type="PackedScene" uid="uid://b8uohr4s8k63c" path="res://enemies/eagle/eagle.tscn" id="2_0j63o"]
 
 [node name="LevelBase" instance=ExtResource("1_gqc2q")]
+
+[node name="Eagle" parent="." index="6" instance=ExtResource("2_0j63o")]
+position = Vector2(303, 29)

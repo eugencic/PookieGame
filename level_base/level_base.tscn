@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://nl0pk36hvusi" path="res://assets/backgrounds/game_background_3/layers/ground_1.png" id="19_7w146"]
 [ext_resource type="Texture2D" uid="uid://dgbymi1qf204o" path="res://assets/backgrounds/game_background_3/layers/clouds_2.png" id="20_ih0r3"]
 [ext_resource type="Texture2D" uid="uid://ccqf51bf7k1w6" path="res://assets/backgrounds/game_background_3/layers/clouds_1.png" id="21_55gtp"]
-[ext_resource type="AudioStream" uid="uid://djtc6agkkp0j6" path="res://assets/sound/after_dark.ogg" id="21_xiof2"]
+[ext_resource type="AudioStream" uid="uid://byj24sv4mxrti" path="res://assets/sound/dragonfather.ogg" id="21_b20ht"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2vlm"]
 texture = ExtResource("1_rsl5b")
@@ -1192,6 +1192,6 @@ position = Vector2(1006, 1)
 position = Vector2(563, 169)
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("21_xiof2")
+stream = ExtResource("21_b20ht")
 volume_db = -15.0
 autoplay = true

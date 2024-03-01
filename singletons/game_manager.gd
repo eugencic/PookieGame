@@ -24,7 +24,6 @@ func load_main_scene() -> void:
 func load_next_level_scene() -> void:
 	set_next_level()	
 	get_tree().change_scene_to_packed(_level_scenes[_current_level])
-	print("Current level")
 	
 func set_next_level() -> void:
 	_current_level += 1	

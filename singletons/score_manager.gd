@@ -66,5 +66,3 @@ func load_high_score() -> void:
 	if HS_KEY in data:
 		_high_score = data[HS_KEY]
 		print("high score:", _high_score)
-		
-		

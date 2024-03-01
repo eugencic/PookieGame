@@ -35,7 +35,7 @@ func _physics_process(delta):
 	get_input()
 	move_and_slide()
 	calculate_states()
-	#update_debug_label()
+	# update_debug_label()
 	
 	if Input.is_action_just_pressed("shoot") == true:
 		shoot()

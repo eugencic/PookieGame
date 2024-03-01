@@ -94,7 +94,7 @@ p2 = NodePath("../Node4/2")
 [node name="Node4" type="Node" parent="." index="25"]
 
 [node name="1" type="Marker2D" parent="Node4" index="0"]
-position = Vector2(-2725, -260)
+position = Vector2(-2727, -369)
 
 [node name="2" type="Marker2D" parent="Node4" index="1"]
 position = Vector2(-2727, -132)
